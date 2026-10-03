@@ -31,4 +31,5 @@ coverage/
 
 # Misc
 *.tmp
-*.bak
+*.bakdocs/*.docx
+docs/evidences/
