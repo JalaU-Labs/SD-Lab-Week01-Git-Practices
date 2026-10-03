@@ -2,7 +2,7 @@ import { greet, renderGreeting } from '../src/js/main.js';
 
 describe('greet function', () => {
     test('returns a greeting with the provided name', () => {
-        expect(greet('Diego')).toBe('Hello, Diego!');
+        expect(greet('Diego')).toBe('Hello, Diego! Have a great day!');
     });
 
     test('returns a generic greeting when name is empty', () => {
@@ -21,7 +21,7 @@ describe('renderGreeting function', () => {
         document.body.innerHTML = '<p id="test-greeting"></p>';
         const element = document.getElementById('test-greeting');
         renderGreeting(element, 'Diego');
-        expect(element.textContent).toBe('Hello, Diego!');
+        expect(element.textContent).toBe('Hello, Diego! Have a great day!');
     });
 
     test('throws an error when element is not provided', () => {

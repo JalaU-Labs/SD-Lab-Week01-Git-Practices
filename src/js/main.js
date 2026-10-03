@@ -7,7 +7,7 @@ export function greet(name) {
     if (!name || typeof name !== 'string') {
         return 'Hello, stranger!';
     }
-    return `Hello, ${name}!`;
+    return `Hello, ${name}! Have a great day!`;
 }
 
 /**
