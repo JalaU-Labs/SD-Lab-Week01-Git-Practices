@@ -1,0 +1,27 @@
+stages:
+  - test
+  - deploy
+
+test:
+  stage: test
+  image: node:20
+  script:
+    - npm ci
+    - npm test
+  artifacts:
+    paths:
+      - coverage/
+    expire_in: 1 week
+
+pages:
+  stage: deploy
+  dependencies:
+    - test
+  script:
+    - mkdir -p public
+    - cp -r index.html src assets public/ 2>/dev/null || true
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
