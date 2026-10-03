@@ -1,0 +1,39 @@
+{
+  "name": "sd-lab-week01-git-practices",
+  "version": "1.0.0",
+  "description": "Laboratorio Semana 1 - Buenas prácticas en el uso de Git (GitLab/GitHub) con proyecto de prueba en HTML, CSS y JS nativo",
+  "main": "src/js/main.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [
+    "git",
+    "gitlab",
+    "github",
+    "jest",
+    "vanilla-js",
+    "html",
+    "css"
+  ],
+  "author": "Diego Alejandro Botina",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "roots": [
+      "<rootDir>/tests"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src/js"
+    ],
+    "collectCoverageFrom": [
+      "src/js/**/*.js"
+    ]
+  }
+}
